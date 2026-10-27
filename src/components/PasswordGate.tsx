@@ -4,7 +4,7 @@ import { useState, type FormEvent } from 'react'
 // PASSWORD CONFIGURATION — Change the password below to whatever you want!
 // ---------------------------------------------------------------------------
 export const ACCEPTED_PASSWORDS = [
-  'MK11{Ijw}*OK'
+  '11'
 ]
 
 type PasswordGateProps = {

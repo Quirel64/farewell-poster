@@ -60,7 +60,7 @@ function App() {
           <p className="eyebrow">voor de begeleiding</p>
           <h2>een bedankje aan de therapeuten</h2>
           <p>
-            ik wil jullie natuurlijk bedanken `(jooske, hilde, isa, rebecca, eline en natuurlijk degene die het gestart hebben, eline en iris.)` voor het starten van deze groep en het altijd klaarstaan om ons te helpen.
+            ik wil jullie natuurlijk bedanken `(jooske, hilde, isa, rebecca, eline en natuurlijk degene die het gestart hebben, andere eline en iris.)` voor het starten van deze groep en het altijd klaarstaan om ons te helpen.
             ook merk ik dat over de loop der tijd jullie meer observant zijn geworden en ons betere vragen konden stellen
             zodat we beter de diepgang konden vinden. ook vond ik het gezellig wanneer jullie meededen met de opdrachten
             want dat hielp voor mij ook om jullie beter te leren kennen dan alleen als een therapeut, wat al helemaal hielp
