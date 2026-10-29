@@ -122,6 +122,9 @@ footer p { margin: 0; }
 }
 @media (max-width: 700px) {
   .module-card {
+    /* Re-set this AFTER the two-column rule below, since that plain rule
+       would otherwise override the media query on mobile (cascade order). */
+    grid-template-columns: 1fr;
     grid-template-areas:
       "title"
       "art"
@@ -183,6 +186,26 @@ footer p { margin: 0; }
   width: clamp(4.5rem, 15vw, 7.2rem);
   height: clamp(4.5rem, 15vw, 7.2rem);
   z-index: 15;
+}
+
+/* On phones the hero copy is nearly full-width, so park the balloons in the
+   bottom corners of the hero — verified at 390px width that they never cover
+   the title, the copy, or the scroll link there. */
+@media (max-width: 700px) {
+  .balloon--green {
+    top: auto;
+    bottom: 1.2rem;
+    left: 0.5rem;
+  }
+  .balloon-spot--red {
+    top: auto;
+    bottom: 3rem;
+    right: 0.5rem;
+  }
+  .balloon-inner {
+    width: clamp(4.6rem, 14vw, 9.2rem);
+    height: clamp(3.4rem, 10vw, 7.2rem);
+  }
 }
 .balloon--red {
   top: 0;
