@@ -160,7 +160,7 @@ export function SpoilerCatEasterEgg() {
             role="button"
             tabIndex={0}
           >
-            <div style={{ width: '4.5rem' }}>
+            <div style={{ width: 'clamp(2.8rem, 11vw, 4.5rem)' }}>
               <LedPixelGrid artwork={cat2Art} label="Bruine kat" shape="sprite" />
             </div>
           </div>
@@ -193,7 +193,7 @@ export function MeteorRockEasterEgg() {
         role="button"
         tabIndex={0}
       >
-        <div style={{ width: '4.2rem' }}>
+        <div style={{ width: 'clamp(2.8rem, 11vw, 4.2rem)' }}>
           <LedPixelGrid artwork={rockArt} label="Kwarts steen" shape="sprite" />
         </div>
       </div>
@@ -207,7 +207,7 @@ export function MeteorRockEasterEgg() {
           role="button"
           tabIndex={0}
         >
-          <div style={{ width: '5.2rem' }}>
+          <div style={{ width: '100%' }}>
             <LedPixelGrid artwork={meteorArt} label="Meteor" shape="sprite" />
           </div>
         </div>

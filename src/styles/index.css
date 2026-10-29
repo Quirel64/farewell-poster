@@ -127,6 +127,11 @@ footer p { margin: 0; }
       "art"
       "memory";
   }
+  .module-card .pixel-grid { width: min(100%, 11rem); }
+  .module-memory {
+    font-size: clamp(1.15rem, 4.2vw, 1.3rem);
+    line-height: 1.55;
+  }
 }
 
 /* Centre the page's reading rhythm without changing the responsive order. */
@@ -145,14 +150,14 @@ footer p { margin: 0; }
    ========================================================================== */
 
 /* Balloons */
-/* Balloons — adjust sizes here if needed */
+/* Balloons — adjust sizes here if needed (min < max, sized with vw so they shrink on phones) */
 .balloon-inner {
-  width: clamp(9.5rem, 9vw, 9.2rem);
-  height: clamp(5.5rem, 9vw, 7.2rem);
+  width: clamp(6rem, 18vw, 9.2rem);
+  height: clamp(4.2rem, 12.5vw, 7.2rem);
 }
 .cat-inner {
-  width: clamp(3.8rem, 6vw, 4.8rem);
-  height: clamp(3.8rem, 6vw, 4.8rem);
+  width: clamp(2.8rem, 11vw, 4.8rem);
+  height: clamp(2.8rem, 11vw, 4.8rem);
 }
 
 .balloon {
@@ -175,8 +180,8 @@ footer p { margin: 0; }
   position: absolute;
   top: 64%;
   right: clamp(1rem, 4vw, 3.5rem);
-  width: clamp(5.5rem, 9vw, 7.2rem);
-  height: clamp(5.5rem, 9vw, 7.2rem);
+  width: clamp(4.5rem, 15vw, 7.2rem);
+  height: clamp(4.5rem, 15vw, 7.2rem);
   z-index: 15;
 }
 .balloon--red {
@@ -249,6 +254,7 @@ footer p { margin: 0; }
 .spoiler-revealed-content {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
   background: #1f1730;
   border: 1px solid #4a3866;
@@ -269,9 +275,11 @@ footer p { margin: 0; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 4.8rem;
+  width: clamp(3.4rem, 13vw, 5.2rem);
+  aspect-ratio: 1;
 }
 .meteor-interactive {
+  width: 100%;
   cursor: pointer;
   filter: drop-shadow(0 0 1rem #ff7c4366);
   transition: transform 0.25s ease;
@@ -289,14 +297,15 @@ footer p { margin: 0; }
 /* Exploding Meteor Shards (4 pieces) */
 .meteor-shards {
   position: absolute;
-  width: 5.2rem;
-  height: 5.2rem;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
 }
 .shard {
   position: absolute;
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 50%;
+  height: 50%;
   background: #8b3434;
   border: 1px solid #ff7c43;
 }
@@ -307,19 +316,19 @@ footer p { margin: 0; }
 
 @keyframes shardFlyTL {
   0% { transform: translate(0, 0) scale(1); opacity: 1; }
-  100% { transform: translate(-4rem, -4rem) rotate(-45deg) scale(0.2); opacity: 0; }
+  100% { transform: translate(-130%, -130%) rotate(-45deg) scale(0.2); opacity: 0; }
 }
 @keyframes shardFlyTR {
   0% { transform: translate(0, 0) scale(1); opacity: 1; }
-  100% { transform: translate(4rem, -4rem) rotate(45deg) scale(0.2); opacity: 0; }
+  100% { transform: translate(130%, -130%) rotate(45deg) scale(0.2); opacity: 0; }
 }
 @keyframes shardFlyBL {
   0% { transform: translate(0, 0) scale(1); opacity: 1; }
-  100% { transform: translate(-4rem, 4rem) rotate(-90deg) scale(0.2); opacity: 0; }
+  100% { transform: translate(-130%, 130%) rotate(-90deg) scale(0.2); opacity: 0; }
 }
 @keyframes shardFlyBR {
   0% { transform: translate(0, 0) scale(1); opacity: 1; }
-  100% { transform: translate(4rem, 4rem) rotate(90deg) scale(0.2); opacity: 0; }
+  100% { transform: translate(130%, 130%) rotate(90deg) scale(0.2); opacity: 0; }
 }
 
 /* The Revealed Quartz Rock */
